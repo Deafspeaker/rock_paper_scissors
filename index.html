@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css">
+    
+</head>
+<body>
+    
+    <div class="backDrop" id = "bDrop">
+        <div class="computer"><img id="computerImage" src="./images/Empty.png"></div>
+        <div class="player"><img id="playerImage" src="./images/Empty.png"></div>
+    </div>
+    <div class="controls">
+        <div class="buttons">
+            <button id="rock" onclick="playerPick('rock')">ROCK</button>
+            <button class="paper" onclick="playerPick('paper')">PAPER</button>
+            <button class="scissors" onclick="playerPick('scissors')">SCISSORS</button>
+        </div>
+        <div class="start">
+            
+        </div>
+
+    </div>
+    <p></p>
+
+    <script src="./script/rps.js"></script>
+</body>
+</html>
