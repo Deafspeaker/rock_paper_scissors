@@ -12,7 +12,9 @@ var computerPick;
 var winCount = 0;
 var tieCount = 0;
 var loseCount = 0;
-
+const winCounter = document.querySelector(".winCounterCount");
+const lossCounter = document.querySelector(".lossCounterCount");
+const tieCounter = document.querySelector(".tieCounterCount");
 
 // newGame sets computer pick for rock paper scrissors
 
@@ -51,14 +53,17 @@ function playerPick(choice) {
     
     if (computerPick == "./images/rock.png") {
         //code if a tie
-        alert("Please play again.");
+        playAgain();
+        setStats();
         tieCount++;
         
     } else if ( computerPick == "./images/paper.png") {
-        alert("Please play again.");
+        playAgain();
+        setStats();
         loseCount++;
     } else {
         youwin();
+        setStats();
         winCount++;
     }
 
@@ -68,13 +73,16 @@ function playerPick(choice) {
     if (computerPick == "./images/rock.png") {
         
         youwin();
+        setStats();
         winCount++;
         
     } else if ( computerPick == "./images/paper.png") {
-        alert("Please play again.");
+        playAgain();
+        setStats();
         tieCount++;
     } else {
-        alert("Please play again.");
+        playAgain();
+        setStats();
         loseCount++;
     }
 
@@ -83,18 +91,23 @@ function playerPick(choice) {
     player.src = "./images/scissors.png";
     if (computerPick == "./images/rock.png") {
         //code if a tie
-        alert("Please play again.");
+        playAgain();
+        setStats();
         loseCount++;
         
     } else if ( computerPick == "./images/paper.png") {
         youwin();
+        setStats();
         winCount++;
     } else {
-        alert("Please play again.");
+        playAgain();
+        setStats();
         tieCount++;
     }
 
 }
+
+
 
     }
 
@@ -108,4 +121,24 @@ function youwin() {
 
 function score() {
     alert(`WINS = ${winCount}, TIES = ${tieCount}, LOSSES = ${loseCount}`);
+}
+
+function playAgain() {
+    setTimeout(() => {
+        alert("Please play again.");
+    }, 1500); 
+}
+
+function setStats() {
+ 
+    
+    
+    setTimeout(() => {
+        
+    
+    winCounter.textContent = winCount;
+    lossCounter.textContent = loseCount;
+    tieCounter.textContent = tieCount;
+    }, 1000);
+
 }
