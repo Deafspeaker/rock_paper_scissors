@@ -117,6 +117,8 @@ function playerPick(choice) {
 
 function youwin() {
     bDrop.style.backgroundImage = "url('./images/youwin.png')";
+    computer.src = "./images/Empty.png";
+    player.src = "./images/Empty.png";
 }
 
 function score() {
