@@ -53,12 +53,12 @@ function playerPick(choice) {
     
     if (computerPick == "./images/rock.png") {
         //code if a tie
-        playAgain();
+        
         setStats();
         tieCount++;
         
     } else if ( computerPick == "./images/paper.png") {
-        playAgain();
+        
         setStats();
         loseCount++;
     } else {
@@ -77,11 +77,11 @@ function playerPick(choice) {
         winCount++;
         
     } else if ( computerPick == "./images/paper.png") {
-        playAgain();
+        
         setStats();
         tieCount++;
     } else {
-        playAgain();
+        
         setStats();
         loseCount++;
     }
@@ -91,7 +91,7 @@ function playerPick(choice) {
     player.src = "./images/scissors.png";
     if (computerPick == "./images/rock.png") {
         //code if a tie
-        playAgain();
+        
         setStats();
         loseCount++;
         
@@ -100,7 +100,7 @@ function playerPick(choice) {
         setStats();
         winCount++;
     } else {
-        playAgain();
+        
         setStats();
         tieCount++;
     }
